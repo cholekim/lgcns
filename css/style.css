@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+body {font-family: 'NanumSquare', sans-serif;}
+html, body {height: 100%;}
+/* 요소의 height를 100%로 쓰고 싶은 경우 html, body 태그를 선택해서 height: 100%; 를 한번 명시해주어야 함 */
+
+
+/* 최상단 헤더 */
+header {width: 100%; height: 100px; background-color: rgba(0,0,0,.2); border-bottom: 1px solid rgba(255,255,255,.5); position: fixed; left: 0; top: 0;}
+#header_container {width: 1600px; height: 100px; margin: auto;}
+#header_container h1 {width: 124px; height: 29px; float: left; /*padding-top: 36px;*/ margin: 36px 137px 0 0; background-image: url(../img/header_logo.png); background-repeat: no-repeat;}
+#header_container h1 span {display: block; text-indent: -9999px;}
+#header_container .lnb {float: left; padding-top: 36px; font-size: 20px; font-weight: bold;}
+#header_container .lnb ul li {float: left; margin-right: 80px;}
+#header_container .lnb ul li a {color: #fff;}
+#header_container .gnb {float: right; padding-top: 40px;}
+#header_container .gnb ul li {float: left; margin-left: 50px; font-weight: bold; font-size: 17px;}
+#header_container .gnb ul li a {color: #fff; background-repeat: no-repeat;}
+#header_container .gnb ul li a img {vertical-align: middle;}
+
+#header_container .gnb ul li a.gnb_inq {background-image: url(../img/ico_inquiry.png); background-position: left center; padding-left: 20px;}
+#header_container .gnb ul li a.gnb_lang {
+    background-image: url(../img/ico_language.png), url(../img/ico_clampW_B.png);
+    background-position: left center, right center;
+    padding: 0 15px 0 25px;
+}
+#header_container .gnb ul li a.gnb_share {
+    background-image: url(../img/ico_shared.png);
+    width: 17px;
+    height: 23px;
+    display: block;
+}
+#header_container .gnb ul li a.gnb_search {
+    background-image: url(../img/ico_header_search.png);
+    width: 23px;
+    height: 22px;
+    display: block;
+}
+#header_container .gnb ul li a.gnb_share span,
+#header_container .gnb ul li a.gnb_search span {display: block; text-indent: -9999px;}
+#header_container .gnb ul li a.gnb_m_menu {display: none;}
+
+
+/* 섹션 공통 */
+.section {width: 100%; height: 100%;}
+
+/* 섹션 1(메인 비주얼 영역) */
+#main_section_01 {background: url(../img/main_visual_01.jpg) no-repeat center / cover;}
+#visual_container {width: 1400px; height: 450px; margin: auto; padding-top: 390px; color: #fff;}
+#visual_container h2 {font-size: 60px; font-weight: 900; text-shadow: 2px 2px 2px rgba(0,0,0,.2); line-height: 1.4; margin-bottom: 40px;}
+#visual_container h3 {font-size: 24px; text-shadow: 2px 2px 2px rgba(0,0,0,.2); margin-bottom: 65px;}
+
+
+
+/* 더보기 버튼 */
+.more_btn {padding: 10px 20px; background-color: #fff; border: 2px solid #000; color: #000; font-weight: bold; font-size: 17px; display: inline-block; margin-bottom: 50px;}
+/* .more_btn img {margin-left: 32px;} 첫번째 방법. 이미지 태그로 넣을 경우 */
+.more_btn::after {content: url(../img/ico_clampBk_R.png); margin-left: 32px;}
+
+
+/* 슬라이드 내비게이션(페이지) */
+.slide_page {font-size: 18px; font-weight: bold; color: #fff; margin: 0 35px;}
+
+
+/* 공통 섹션 타이틀 */
+.title {text-align: center;}
+.title h2 {font-size: 50px; font-weight: 900;}
+.title h3 {font-size: 24px; padding: 28px 0 60px;}
+
+
+
+/* 섹션 2(검색 영역) */
+#main_section_02 {background: url(../img/bg_section1.jpg) no-repeat center / cover;}
+#search_container {width: 1600px; margin: auto; padding-top: 175px;}
+#search_container .title {color: #fff; margin-bottom: 30px;}
+.searchbox {width: 657px; height: 80px; margin: 0 auto 30px; font-size: 0;}
+.searchbox input {width: 557px; height: 80px; vertical-align: top; font-family: 'NanumSquare', sans-serif; padding-left: 42px; box-sizing: border-box; font-size: 30px; color: #999; /* outline: 0; 포커스가 잡힌 요소에 테두리가 생기는 것을 없애줌. but,접근성에 안좋음 */}
+.searchbox button {width: 100px; height: 80px; background: #fff; cursor: pointer;}
+.hashtagbox {text-align: center; /*font-size: 0;*/ margin-bottom: 70px;}
+.hashtag {display: inline-block; padding: 10px 20px; border: 1px solid rgba(255,255,255,.5); /*font-size: 20px;*/ border-radius: 30px; font-size: 18px; color: #fff;}
+.hashtag:hover {background-color: #bb0942; border-color: #bb0942;}
+.faq {border-top: 1px solid rgba(255,255,255,.5); padding-top: 55px; text-align: center;}
+.faq h3 {color: #fff; font-size: 30px; margin-bottom: 35px;}
+.faq_item {display: inline-block; background-color: #fff; padding: 36px 42px; text-align: left; font-size: 20px; font-weight: bold; line-height: 1.6; margin: 0 10px; border-radius: 20px; position: relative;}
+.faq_item strong {font-weight: 900;}
+.faq_item::before {content: ""; display: block; width: 0; height: 0; position: absolute; left: 0; top: -3px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+}
+#search_container .slide_nav {text-align: center; margin-top: 42px;}
+
+
+/* 섹션 3(IT 뉴스 영역) */
+#main_section_03 {padding-top: 175px; box-sizing: border-box;}
+.section03_content {width: 100%; height: 590px; position: relative; background: url(../img/bg_section2_8.png) no-repeat center / cover;}
+.section03_nav {width: 640px; height: 590px; position: absolute; left: 100px; top: 0;}
+.section03_nav button {width: 640px; height: 40px; background: rgba(0,0,0,.8);}
+.section03_nav button.nav_prev {border-bottom: 1px solid rgba(255,255,255,.1);}
+.section03_nav ul li {width: 640px; height: 169px; background: rgba(0,0,0,.8); border-bottom: 1px solid rgba(255,255,255,.1); padding: 35px 60px 0; box-sizing: border-box; color: #fff; font-size: 24px; line-height: 1.6;}
+.section03_nav ul li a {color: #fff; font-size: 18px; text-decoration: underline;}
+.section03_nav ul li:nth-child(2) {background: rgba(187,9,66,.9);}
+.section03_slide {width: 50%; height: 590px; position: absolute; left: 50%; top: 0; padding: 130px 30px 0 0; box-sizing: border-box; color: #fff;}
+.section03_slide h2 {font-size: 70px; font-weight: bold; margin-bottom: 45px;}
+.section03_slide h3 {font-size: 30px; margin-bottom: 30px;}
+.section03_slide p {font-size: 20px; line-height: 1.5; margin-bottom: 35px;}
+.section03_slide .more_btn {background: #000; color: #fff; border-color: #fff;}
+.section03_slide .more_btn::after {content: url(../img/ico_clampW_R.png);}
+
+
+
+/* 섹션 4(IT 신기술 영역) */
+#main_section_04 {padding-top: 175px; box-sizing: border-box;}
+.section04_content {width: 100%;}
+.section04_content ul {overflow: hidden; margin-bottom: 60px;}
+.section04_content ul li {width: 20%; float: left; position: relative;}
+.section04_content ul li a {color: #fff;}
+.section04_content ul li img {width: 100%;}
+.section04_content ul li h4 {position: absolute; left: 30px; bottom: 130px; font-size: 30px; font-weight: 900;}
+.section04_content ul li p {position: absolute; left: 30px; bottom: 80px; font-size: 20px;}
+.section04_slider {width: 270px; height: 6px; background: #e8e8e8; clear: both; margin: auto; border-radius: 2px;}
+.section04_slider .bar {width:112px; height: 6px; background-color: #bb0942; border-radius: 2px;}
+
+
+/* 섹션 5(전문지식 영역) */
+#main_section_05 {background: url(../img/bg_section4.jpg) no-repeat center / cover; padding-top: 175px; box-sizing: border-box;}
+#main_section_05 .title {color: #fff;}
+.section05_slide {width: 1080px; height: 394px; margin: auto;}
+.section05_slide_img {width: 480px; height: 320px; float: left;}
+.section05_slide_content {width: 550px; height: 320px; float: right; color: #fff;}
+.section05_slide_content h2 {font-size: 30px; line-height: 1.4;}
+.section05_slide_content p:first-of-type {font-size: 18px; line-height: 1.5; margin: 35px 0 65px;}
+.section05_slide_content .auther {font-size: 18px; font-weight: bold;}
+.section05_slide .slide_nav {clear: both; text-align: center; padding-top: 34px;}
+
+
+/* 섹션 6(문의하기 영역) */
+#main_section_06 {width:100%; height: 332px; background: url(../img/img_inquiry_Bg.jpg) no-repeat center / cover; color: #fff; text-align: center; padding-top: 110px; box-sizing: border-box;}
+#main_section_06 h2 {font-size: 30px;}
+#main_section_06 h3 {font-size: 20px; margin: 20px 0 45px;}
+#main_section_06 a {color: #fff; font-size: 18px;}
+#main_section_06 a::after {content: url(../img/ico_contact.png); margin-left: 5px;}
+
+/* 푸터 영역 */
+footer {width: 1600px; height: 274px; margin: auto; position: relative; font-size: 18px; font-weight: bold; color: #666;}
+
+.fnb1 {float: left; padding-top: 48px;}
+.fnb1 ul li {display: inline; margin-right: 20px;}
+.fnb1 ul li a {color: #000;}
+
+.sns {position: absolute; right: 0; top: 103px;}
+.sns ul li {float: left; width: 45px; height: 45px; margin-left: 10px;}
+.sns ul li a {width: 100%; height: 100%; display: block; border-radius: 50%; /* text-align: center; line-height: 45px;*/ background-color: #eee; background-repeat: no-repeat; background-position: center;}
+/* .sns ul li a img {vertical-align: middle;} */
+.sns ul li a.sns_b {background-image: url(../img/ico_footer_b.png); }
+.sns ul li a.sns_b:hover {background-image: url(../img/ico_footer_b_on.png); background-color: #666;}
+.sns ul li a.sns_f {background-image: url(../img/ico_footer_f.png); }
+.sns ul li a.sns_f:hover {background-image: url(../img/ico_footer_f_on.png); background-color: #1877f2;}
+.sns ul li a.sns_n {background-image: url(../img/ico_footer_n.png); }
+.sns ul li a.sns_n:hover {background-image: url(../img/ico_footer_n_on.png); background-color: #5aaf33;}
+.sns ul li a.sns_y {background-image: url(../img/ico_footer_y.png); }
+.sns ul li a.sns_y:hover {background-image: url(../img/ico_footer_y_on.png); background-color: #ea3223;}
+.sns ul li a.sns_in {background-image: url(../img/ico_footer_in.png); }
+.sns ul li a.sns_in:hover {background-image: url(../img/ico_footer_in_on.png); background-color: #0a66c2;}
+.sns ul li a span {
+    /* 스크린리더가 읽지 못함 */
+    /* width: 0; height: 0; font-size: 0; */
+    /* opacity: 0; */
+    /* visibility: hidden; */
+
+    /* display: block; text-indent: -9999px; 많이 쓰는 방법 1 */
+    position: absolute; top: -9999px; left: -9999px; /* 많이 쓰는 방법 2 */
+
+
+    /* a태그에 hover했을 때 이미지 자체가 바뀌어야 하는 경우
+    1. 이미지 태그나 백그라운드 이미지, 또는 스크립트를 사용하면 됩니다.
+    2. 대체 방법으로 CSS만으로 처리할 수 있는 방법이 있음 -> a태그에 백그라운드로 이미지를 깔고 hover했을 때 백그라운드 이미지를 변경하면 됌!
+    but, 이미지 태그는 alt속성을 이용해 이미지에 대한 설명을 작성할 수 있으나 백그라운드 이미지로 처리하면 비장애인의 눈으로는 이미지를 확인할 수 있지만 시각장애인에게는 아무것도 없는 빈 박스로 인식(스크린리더가 읽을 것이 없음)하기 때문에 이 부분을 읽지도 않고, 포커스도 잡히지 않음.
+    그래서 해당 부분의 내용을 텍스트를 작성한 다음 실제로 눈에 보여지는 부분(이미지나 아이콘)만 볼 수 있게 하기 위해 텍스트를 어디 멀리 보내거나 글자를 안보이게 하는 등의 일종의 꼼수를 쓴다.
+    [접근성 측면에서의 IR(Image Replacement)기법]
+    이미지 : background, 배경 / 텍스트 : foreground, 전경 */
+
+
+}
+
+
+.family {text-align: right; padding-top: 32px;}
+#familysite {border: 1px solid #999; width: 240px; height: 55px; font-size: 18px; padding: 0 30px; font-family: 'NanumSquare', sans-serif; box-sizing: border-box; color: #999;}
+
+.fnb2 {clear: both; padding-top: 28px; margin-bottom: 24px; overflow: hidden;}
+.fnb2 ul li {display: inline; border-right: 1px solid #d8d8d8; padding-right: 16px; margin-right: 12px;}
+.fnb2 ul li:last-child {border-right: 0;}
+.fnb2 ul li a {color: #666;}
+.fnb2 ul li:first-child a {color: #bb0942;}
+
+address {clear: both; font-style: normal; margin-bottom: 10px;}
+
+
+
+
+/* 태블릿(~1024px) */
+@media screen and (max-width: 1024px) {
+    header {height: 70px;}
+    #header_container {width: 100%; height: 70px; padding: 0 20px; box-sizing: border-box;}
+    #header_container h1 {width: 90px; background-size: 100%; background-image: url(../img/mobile/header_logo_m.png); margin-top: 28px;}
+    #header_container .gnb {width: 116px; padding-top: 26px;}
+    #header_container .lnb,
+    #header_container .gnb ul li a.gnb_inq,
+    #header_container .gnb ul li a.gnb_lang {display: none;}
+    #header_container .gnb ul li a.gnb_m_menu {display: block;
+        background-image: url(../img/mobile/ico_menu_m.png);
+        background-size: 16px;
+        background-position-y: 3px;
+        width: 16px;
+    }
+    #header_container .gnb ul li a.gnb_m_menu span {display: block; text-indent: -9999px;}
+    #header_container .gnb ul li {margin-left: 20px;}
+
+
+
+    #visual_container {width: 100%; padding: 310px 100px 0; box-sizing: border-box;}
+
+    #search_container {width: 100%; padding: 30vw 7vw 0; box-sizing: border-box;}
+    .faq_item {width: 22%; padding: 25px; vertical-align: text-top;}
+
+    .section03_nav {width: 45%; left: 3%;}
+    .section03_nav button.nav_prev,
+    .section03_nav button.nav_next {width: 100%;}
+    .section03_nav ul li {width: 100%;}
+    .section03_nav ul li p {font-size: 2.5vw;}
+    
+    
+
+    #main_section_04 {padding-top: 30vw;}
+    #main_section_04 .title h2 {padding-left: 5%; padding-right: 5%;}
+    .section04_content ul li {width: 25%;}
+    .section04_content ul li:last-child {display: none;}
+    /* 임시로 스크립트 없이 보여지는 부분을 처리하기 위해 설정했음! 원래는 이렇게 하면 안됌! 원래는 스크립트를 이용해서 디바이스의 너비를 인식해 4개만 보여줄 수 있도록 설정을 해야함! */
+
+    #main_section_05 .title h2 {padding-left: 5%; padding-right: 5%;}
+    .section05_content {width: 100%;}
+    .section05_slide {width: 100%;}
+    .section05_slide_img {width: 45%; margin-right: 5%;}
+    .section05_slide_img img {width: 100%;}
+    .section05_slide_content {width: 50%;}
+
+    footer {width: 100%; height: auto; text-align: center; padding-bottom: 50px;}
+    .fnb1 {float: none; margin-bottom: 30px;}
+    .fnb1 ul li {display: inline; float: none;}
+    .fnb1 ul li:last-child {margin-right: 0;}
+    .sns {position: static; text-align: center;}
+    .sns ul li {float: none; display: inline-block;}
+    .sns ul li:first-child {margin-left: 0;}
+    .family {text-align: center; margin-bottom: 50px;}
+    #familysite {border-left: 0; border-right: 0; width: 310px;}
+    .fnb2 {padding-top: 0;}
+    .fnb2 ul li {display: block; border-right: 0; padding-right: 0; margin-right: 0; margin-bottom: 10px;}
+
+}
+
+
+
+
+
+/* 모바일(~768px) */
+@media screen and (max-width: 768px) {
+    /* vw(Viewport Width)단위 : 뷰포트 화면의 너비(기기의 보여지는 전체 너비)를 100이라고 쳤을 때, 그 비율로 표시하는 방법. 부모요소가 기준이 아닌, 항상 뷰포트 너비가 기준임!!
+    ex : 가로 360px 너비가 100vw라고 한다면, 1vw는 3.6px */
+
+    header {height: 20vw;}
+    #header_container {height: 20vw;}
+    #header_container h1 {width: 24vw; height: 6vw; margin-top: 7vw;}
+
+    #header_container .gnb {width: 19vw; padding-top: 7vw;}
+    #header_container .lnb,
+    #header_container .gnb ul li a.gnb_inq,
+    #header_container .gnb ul li a.gnb_lang,
+    #header_container .gnb ul li a.gnb_share {display: none;}
+    #header_container .gnb ul li a.gnb_search {
+        background-image: url(../img/mobile/ico_header_search_m.png);
+        background-size: 4vw;
+        width: 4vw;
+        height: 4vw;
+    }
+    #header_container .gnb ul li a.gnb_m_menu {display: block;
+        background-image: url(../img/mobile/ico_menu_m.png);
+        background-size: 4vw;
+        background-position-y: 3px;
+        width: 4vw;
+        height: 4vw;
+    }
+
+
+
+    #visual_container {padding: 50vw 10% 0;}
+    #visual_container h2 {font-size: 8vw;}
+    #visual_container p {font-size: 4vw;}
+
+    .title h2 {font-size: 8vw; padding-left: 5%; padding-right: 5%; margin-bottom: 10vw;}
+    .title h3 {display: none;}
+
+    #search_container {padding: 25vw 10% 0;}
+    .searchbox {width: 80vw; height: 15vw; margin-bottom: 5vw;}
+    .searchbox input {width: 85%; height: 100%; font-size: 5vw; padding: 0 5vw;}
+    .searchbox button {width: 15%; height: 100%;}
+    .hashtag {font-size: 3.5vw;}
+    .hashtag:nth-child(4),
+    .hashtag:last-child {display: none;}
+
+    .faq_item {width: 100%; box-sizing: border-box;}
+    .faq_item:nth-child(2),
+    .faq_item:last-child {display: none;}
+
+    .section03_nav {width: 100%; left: 0;}
+    .section03_nav ul li p {font-size: 4vw;}
+    .section03_nav ul li:first-child,
+    .section03_nav ul li:nth-child(3) {display: none;}
+    .section03_nav button,
+    .section03_nav ul li {width: 90%; height: 30vw; float: left; padding: 4vw; background-color: rgba(187,9,66,.9);}
+    .section03_nav button.nav_prev,
+    .section03_nav button.nav_next {width: 5%; border: 0; padding: 0;}
+    .section03_slide {width: 100%; position: static; padding: 45vw 10vw; box-sizing: border-box;}
+    .section03_slide h2 {font-size: 12vw;}
+    .section03_slide p {display: none;}
+
+
+    #main_section_04 {padding-top: 50vw;}
+    .section04_content ul li {width: 50%;}
+
+    .section04_content ul li:nth-child(3),
+    .section04_content ul li:nth-child(4) {display: none;}    
+
+    .section05_slide {width: 70%; height: auto;}
+    .section05_slide_img {width: 100%; height: auto; float: none; margin-bottom: 5vw;}
+    .section05_slide_content {width: 100%; height: auto;}
+    .section05_slide_content h2 {font-size: 5vw; margin-bottom: 3vw;}
+    .section05_slide_content p {display: none;}
+    .section05_slide_content p.auther {display: block; font-size: 4vw;}
+
+
+    #main_section_06 {padding: 30vw 8vw 0;}
+    #main_section_06 h2 {font-size: 5vw;}
+    #main_section_06 h3 {font-size: 4vw;}
+
+
+    footer {width: 100%; height: auto; text-align: center; margin-bottom: 50px;}
+    .fnb1 {float: none;}
+    .fnb1 ul li {display: inline; float: none;}
+    .sns {position: static; margin: auto;}
+    .family {text-align: center; margin-bottom: 50px;}
+    #familysite {border-left: 0; border-right: 0; width: 310px;}
+    .fnb2 ul li {display: block; border-right: 0; padding-right: 0; margin-right: 0; margin-bottom: 10px;}
+
+
+
+
+
+
+}
